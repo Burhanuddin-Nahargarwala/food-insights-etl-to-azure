@@ -16,8 +16,7 @@ jobs:
     - name: Log in to Azure
       uses: azure/login@v1
       with:
-        username: ${{ secrets.AZURE_USERNAME }}  # Store your Azure username in GitHub secrets
-        password: ${{ secrets.AZURE_PASSWORD }}  # Store your Azure password in GitHub secrets
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Build Docker image
       run: |
